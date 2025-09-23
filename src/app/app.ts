@@ -1,6 +1,9 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Student } from './student/student';
+import { Database } from './database/database';
+import { Teacher } from './teacher/teacher';
+import { NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -10,5 +13,15 @@ import { Student } from './student/student';
 })
 export class App {
   protected readonly title = signal('Vasvári Tanár Értekelő Rendszer');
-  student = new Student();
+  student: Student;
+  
+  constructor() {
+    this.student = new Student();
+    this.student.name = Database.getName();
+    this.student.teachers = Database.getTeachers();
+  }
+
+  onTeacherChange($event: Event) {
+  throw new Error('Method not implemented.');
+  }
 }
