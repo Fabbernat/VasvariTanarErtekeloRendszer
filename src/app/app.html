@@ -213,12 +213,10 @@
 
       <h1>Hello {{ student.name }}</h1>
       <label for="teacher-select">Tanár kiválasztása</label>
-      @code {
-        select component.addProperty(ngModel);
-      }@end
-      <select name="teachers" id="teacher-select" [(ngModel)]="student.teacherId">
+      
+      <select name="teachers" id="teacher-select" (change)="onTeacherChange($event)">
         <option value="null" disabled selected>--Please choose an option--</option>
-        <option> @for (teacher of teachers; track teacher.id) {
+        <option> @for (teacher of student.teachers; track teacher.id) {
         <option [value]="teacher.id">
           {{ teacher.name }}
         </option>
