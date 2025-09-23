@@ -18,7 +18,6 @@ export class App {
   constructor() {
     this.student = new Student();
     this.student.name = Database.getName();
-    this.student.teachers = Database.getTeachers();
   }
 
   onTeacherChange($event: Event) {

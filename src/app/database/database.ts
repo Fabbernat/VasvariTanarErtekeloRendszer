@@ -9,23 +9,16 @@ import { Teacher } from '../teacher/teacher';
 })
 export class Database {
 
-  name: string = "Gipsz Jakab";
-  teachers: string[] = ["Kovács Katalin", "Nagy Péter", "Szabó Anna"];
+  static name: string = "Gipsz Jakab";
+  static teachers: string[] = ["Kovács Katalin", "Nagy Péter", "Szabó Anna"];
 
-  constructor(customName: string, teachers: string[]) {
-    this.name = customName;
-    this.teachers = teachers;
-  }
+  constructor() {}
 
   static getName(): string {
-    return "Gipsz Jakab";
+    return Database.name;
   }
 
-  static getTeachers() {
-    return [
-      new Teacher("Kovács Katalin"),
-      new Teacher("Nagy Péter"),
-      new Teacher("Szabó Anna")
-    ];
+  static getTeachers(): string[] {
+    return Database.teachers;
   }
 }
