@@ -12,7 +12,9 @@ export class Database {
   name: string = "Gipsz Jakab";
   teachers: string[] = ["Kovács Katalin", "Nagy Péter", "Szabó Anna"];
 
-  constructor(customName: string, teachers: string[]) {
+  constructor() {
+    const teachers: string[] = ["Kovács Katalin", "Nagy Péter", "Szabó Anna"];
+    const customName: string = "Gipsz Jakab";
     this.name = customName;
     this.teachers = teachers;
   }
@@ -23,9 +25,9 @@ export class Database {
 
   static getTeachers() {
     return [
-      new Teacher("Kovács Katalin"),
-      new Teacher("Nagy Péter"),
-      new Teacher("Szabó Anna")
+      new Teacher(),
+      new Teacher(),
+      new Teacher()
     ];
   }
 }

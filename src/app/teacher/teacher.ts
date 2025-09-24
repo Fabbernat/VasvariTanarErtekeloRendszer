@@ -7,13 +7,13 @@ import { Component, Inject, Injectable } from '@angular/core';
   styleUrl: './teacher.sass'
 })
 
-@Injectable({myName?: string})
 export class Teacher {
   id: number;
   name: string;
   static nextId: number = 1;
 
-  constructor(myName?: string) {
+  constructor() {
+    const myName: string = "";
     this.id = Teacher.nextId++;
     this.name = myName ?? randomName(); // if no name is given, generate a random one
   }

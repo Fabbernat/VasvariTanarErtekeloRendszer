@@ -215,22 +215,17 @@
       @if (student.teachers.length < 1) {
       <p>Sajnos nem találtuk meg a tanáraidat 😢</p>  
       } @else {
-      <!-- <label for="teacher-select">Tanár kiválasztása</label>
-      <select name="teachers" id="teacher-select" [(ngModel)]="student.teacherId">
+      <label for="teacher-select">Tanár kiválasztása</label>
+      <select name="teachers" id="teacher-select">
         <option value="null" disabled selected>--Please choose an option--</option>
-        <option @for (teacher of teachers; track teacher.id) {
+        <!-- <option @for (teacher of teachers; track teacher.id) {
         [value]="teacher.id">
           {{ teacher.name }}
-        </option>
-        }
+        </option> -->
       </select>
-      <p>Az általad kiválasztott tanárod: {{ student.selectedTeacher?.name }}</p>
-      <p>Az általad kiválasztott tanárod e-mail címe: {{ student.selectedTeacher?.email }}</p>
-      <p>Az általad kiválasztott tanárod tárgyai:
-        <span *ngFor="let subject of student.selectedTeacher?.subjects; let isLast = last">
-          {{ subject }}<span *ngIf="!isLast">, </span>
-        </span> -->
-      }
+    }
+      
+      
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">
