@@ -3,14 +3,16 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import Student from './Student';
 function HelloWorld() {
 
   const title = "Vasvári Tanár Értekelő Rendszer";
+  const student = Student();
 
   return <main>
     <h1 className="greeting center">{title}</h1>
     <p> The app is running. 🎉</p>
+    <h1>Hello { student.fullName }</h1>
     <label for="teacher-select">Tanár kiválasztása</label>
         <br />
     <select name="teachernames" id="teachername-select">
