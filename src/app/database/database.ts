@@ -9,18 +9,18 @@ import { Teacher } from '../teacher/teacher';
 })
 export class Database {
 
-  name: string = "Gyuris Áron";
+  name: string = "Gipsz Jakab";
   teachers: string[] = ["Kovács Katalin", "Nagy Péter", "Szabó Anna"];
 
   constructor() {
     const teachers: string[] = ["Kovács Katalin", "Nagy Péter", "Szabó Anna"];
-    const customName: string = "Gyuris Áron";
+    const customName: string = "Gipsz Jakab";
     this.name = customName;
     this.teachers = teachers;
   }
 
   static getName(): string {
-    return "Gyuris Áron";
+    return "Gipsz Jakab";
   }
 
   static getTeachers() {
