@@ -216,12 +216,15 @@
       <p>Sajnos nem találtuk meg a tanáraidat 😢</p>  
       } @else {
       <label for="teacher-select">Tanár kiválasztása</label>
+        <br />
       <select name="teachers" id="teacher-select">
-        <option value="null" disabled selected>--Please choose an option--</option>
+        <option value="null" disabled selected>-- Kérlek, válaszd ki a következő tanárt! --</option>
         <!-- <option @for (teacher of teachers; track teacher.id) {
         [value]="teacher.id">
           {{ teacher.name }}
         </option> -->
+        <option *ngFor="let teacher of student.teachers" [value]="teacher.id">
+          {{ teacher.name }}
       </select>
     }
       
