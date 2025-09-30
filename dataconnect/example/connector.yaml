@@ -1,0 +1,38 @@
+connectorId: example
+generate:
+  javascriptSdk:
+    - outputDir: ..\..\src\dataconnect-generated
+      package: "@dataconnect/generated"
+      packageJsonDir: ..\..
+      react: false
+      angular: false
+    - outputDir: ..\..\React\src\dataconnect-generated
+      package: "@dataconnect/generated"
+      packageJsonDir: ..\..\React
+      react: false
+      angular: false
+    - outputDir: ..\..\Angular\src\dataconnect-generated
+      package: "@dataconnect/generated"
+      packageJsonDir: ..\..\Angular
+      react: false
+      angular: true
+    - outputDir: ..\..\React\vasvari-tanar-ertekelo-rendszer\src\dataconnect-generated
+      package: "@dataconnect/generated"
+      packageJsonDir: ..\..\React\vasvari-tanar-ertekelo-rendszer
+      react: true
+      angular: false
+    - outputDir: ..\..\gysoft-ver-app\src\react\src\dataconnect-generated
+      package: "@dataconnect/generated"
+      packageJsonDir: ..\..\gysoft-ver-app\src\react
+      react: false
+      angular: false
+    - outputDir: ..\..\gysoft-ver-app\src\angular\src\dataconnect-generated
+      package: "@dataconnect/generated"
+      packageJsonDir: ..\..\gysoft-ver-app\src\angular
+      react: false
+      angular: true
+    - outputDir: ..\..\gysoft-ver-app\src\react\ver\src\dataconnect-generated
+      package: "@dataconnect/generated"
+      packageJsonDir: ..\..\gysoft-ver-app\src\react\ver
+      react: true
+      angular: false
