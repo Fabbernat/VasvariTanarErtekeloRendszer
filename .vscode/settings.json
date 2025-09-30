@@ -1,0 +1,6 @@
+{
+    "terminal.integrated.bellDuration": 1,
+    "terminal.integrated.confirmOnExit": "hasChildProcesses",
+    "terminal.integrated.cursorBlinking": false,
+    "terminal.integrated.defaultProfile.windows": "PowerShell"
+}
