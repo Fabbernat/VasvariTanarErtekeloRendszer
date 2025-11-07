@@ -212,19 +212,32 @@
       <p> The app is running. 🎉</p>
 
       <h1>Hello {{ student.name }}</h1>
+      @if (student.teachers.length < 1) {
+      <p>Sajnos nem találtuk meg a tanáraidat 😢</p>  
+      } @else {
       <label for="teacher-select">Tanár kiválasztása</label>
-      @code {
-        select component.addProperty(ngModel);
-      }@end
-      <select name="teachers" id="teacher-select" [(ngModel)]="student.teacherId">
-        <option value="null" disabled selected>--Please choose an option--</option>
-        <option> @for (teacher of teachers; track teacher.id) {
-        <option [value]="teacher.id">
-          {{ teacher.name }}
-        </option>
+        <br />
+      <!-- <select name="teachers" id="teacher-select">
+        <option value="null" disabled selected>-- Kérlek, válaszd ki a következő tanárt! --</option>
+        @for (teacher of student.teachers; track teacher.id) {
+        <option value="teacher.id">{{ teacher.id + ' ' + teacher.name }}</option>
+        } @empty {
+          <option disabled value="404">Nem találtunk egy tanárt sem</option>
+        }
+      </select> -->
+      <select name="teachernames" id="teachername-select">
+        <option value="null" disabled selected>-- Kérlek, válaszd ki a következő tanár nevét! --</option>
+        @for (teacherName of teacherNames; track teacherName) {
+        <option value="teacher.id">{{ teacherName }}</option>
+        } @empty {
+          <option disabled value="404">Nem találtunk egy tanárt sem</option>
         }
       </select>
-
+      <br>
+      <div>A tanárok száma: {{ teacherNames.length}} fő.</div>
+    }
+      
+      
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">
